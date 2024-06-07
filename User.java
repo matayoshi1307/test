@@ -1,4 +1,5 @@
 package com.example.demo;
+import com.example.demo.User;
 
 public class User {
     private String name;
