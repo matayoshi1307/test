@@ -1,6 +1,5 @@
 package com.example.demo;
 
-import org.springframework.boot.autoconfigure.security.SecurityProperties.User;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,7 +9,7 @@ public class HelloController {
 
     @GetMapping("/hello")
     public User hello(@RequestParam(value = "name", defaultValue = "World") String name) {
-        return new User();
+        return new User(name);
     }
 }
 
